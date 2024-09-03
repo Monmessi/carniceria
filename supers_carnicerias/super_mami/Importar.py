@@ -1,19 +1,27 @@
-import csv
-import mysql.connector
-from datetime import datetime
-from dotenv import load_dotenv
 import os
+import csv  # Importar para manejar CSV
+import mysql.connector  # Importar para conectar a MySQL
+from datetime import datetime  # Importar para manejar fechas
+from dotenv import load_dotenv
 
-# Cargar variables de entorno desde el archivo .env
-load_dotenv()
+# Especifica la ruta del archivo .env
+dotenv_path = os.path.join(os.path.dirname(__file__), '../.env')
 
-# Obtener las credenciales de la base de datos desde las variables de entorno
+# Cargar el archivo .env desde la ruta específica
+load_dotenv(dotenv_path)
+
+# Obtener las variables de entorno
 host = os.getenv('host')
 user = os.getenv('user')
 password = os.getenv('password')
 database = os.getenv('database')
 
-# Conexión a la base de datos MySQL utilizando las credenciales de .env
+print(f"Host: {host}")
+print(f"User: {user}")
+print(f"Password: {password}")
+print(f"Database: {database}")
+
+# Conexión a la base de datos MySQL
 conexion = mysql.connector.connect(
     host=host,
     user=user,

@@ -1,15 +1,33 @@
-import csv
-import mysql.connector
-from datetime import datetime
+import os
+import csv  # Importar para manejar CSV
+import mysql.connector  # Importar para conectar a MySQL
+from datetime import datetime  # Importar para manejar fechas
+from dotenv import load_dotenv
+
+# Especifica la ruta del archivo .env
+dotenv_path = os.path.join(os.path.dirname(__file__), '../.env')
+
+# Cargar el archivo .env desde la ruta específica
+load_dotenv(dotenv_path)
+
+# Obtener las variables de entorno
+host = os.getenv('host')
+user = os.getenv('user')
+password = os.getenv('password')
+database = os.getenv('database')
+
+print(f"Host: {host}")
+print(f"User: {user}")
+print(f"Password: {password}")
+print(f"Database: {database}")
 
 # Conexión a la base de datos MySQL
 conexion = mysql.connector.connect(
-    host="localhost",
-    user="root",  # Cambia 'tu_usuario' por tu usuario de MySQL
-    password="44273842",  # Cambia 'tu_contraseña' por tu contraseña de MySQL
-    database="carnes"
+    host=host,
+    user=user,
+    password=password,
+    database=database
 )
-
 cursor = conexion.cursor()
 
 # Inserción en la tabla Supermercados

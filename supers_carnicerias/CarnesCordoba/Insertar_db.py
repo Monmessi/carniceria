@@ -1,6 +1,32 @@
-import pandas as pd
-import mysql.connector
+import os
+import mysql.connector  # Importar para conectar a MySQL
+import pandas as pd  # Importar para manejar datos en DataFrames
+from dotenv import load_dotenv
 
+# Especifica la ruta del archivo .env
+dotenv_path = os.path.join(os.path.dirname(__file__), '../.env')
+
+# Cargar el archivo .env desde la ruta específica
+load_dotenv(dotenv_path)
+
+# Obtener las variables de entorno
+host = os.getenv('host')
+user = os.getenv('user')
+password = os.getenv('password')
+database = os.getenv('database')
+
+print(f"Host: {host}")
+print(f"User: {user}")
+print(f"Password: {password}")
+print(f"Database: {database}")
+
+# Conexión a la base de datos MySQL
+conexion = mysql.connector.connect(
+    host=host,
+    user=user,
+    password=password,
+    database=database
+)
 # Leer el archivo CSV
 df = pd.read_csv('productos_carnes_limpio.csv')
 
