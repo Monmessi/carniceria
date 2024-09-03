@@ -1,13 +1,32 @@
-import csv
-import re
-import pymysql
+import os
+import csv  # Importar para manejar CSV
+import mysql.connector  # Importar para conectar a MySQL
+from datetime import datetime  # Importar para manejar fechas
+from dotenv import load_dotenv
+
+# Especifica la ruta del archivo .env
+dotenv_path = os.path.join(os.path.dirname(__file__), '../.env')
+
+# Cargar el archivo .env desde la ruta específica
+load_dotenv(dotenv_path)
+
+# Obtener las variables de entorno
+host = os.getenv('host')
+user = os.getenv('user')
+password = os.getenv('password')
+database = os.getenv('database')
+
+print(f"Host: {host}")
+print(f"User: {user}")
+print(f"Password: {password}")
+print(f"Database: {database}")
 
 # Conexión a la base de datos MySQL
-connection = pymysql.connect(
-    host='localhost',
-    user='root',
-    password='44273842',
-    database='carnes'
+conexion = mysql.connector.connect(
+    host=host,
+    user=user,
+    password=password,
+    database=database
 )
 
 def limpiar_precio(precio):
@@ -19,10 +38,10 @@ def limpiar_precio(precio):
         return None  # O manejar el error de otra manera si es necesario
 
 try:
-    with connection.cursor() as cursor:
+    with conexion.cursor() as cursor:  # Usar 'conexion' en lugar de 'connection'
         # Insertar en la tabla Supermercados si no existe
         cursor.execute("INSERT IGNORE INTO Supermercados (Nombre_Supermercado) VALUES ('MH minimercado')")
-        connection.commit()
+        conexion.commit()
 
         # Obtener el ID del supermercado recién insertado o existente
         cursor.execute("SELECT ID_Supermercado FROM Supermercados WHERE Nombre_Supermercado='MH minimercado'")
@@ -33,7 +52,7 @@ try:
             INSERT IGNORE INTO Sucursales (ID_Supermercado, Direccion, Departamento, Provincia, Sucursal) 
             VALUES (%s, 'Av. Recta Martinolli 8024', 'Córdoba Capital', 'Córdoba', 'Argüello')
         """, (id_supermercado,))
-        connection.commit()
+        conexion.commit()
 
         # Obtener el ID de la sucursal recién insertada o existente
         cursor.execute("SELECT ID_Sucursal FROM Sucursales WHERE ID_Supermercado=%s", (id_supermercado,))
@@ -49,9 +68,9 @@ try:
                         "INSERT INTO Productos (Nombre_Producto, Categoria, ID_Supermercado, Fecha_Carga, Precio) VALUES (%s, %s, %s, CURDATE(), %s)",
                         (row['Producto'], row['Categoría'], id_supermercado, precio_limpio)
                     )
-            connection.commit()
+            conexion.commit()
 
         print("Datos insertados correctamente en la base de datos.")
 
 finally:
-    connection.close()
+    conexion.close()  # Usar 'conexion' en lugar de 'connection'

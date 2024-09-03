@@ -1,11 +1,30 @@
-import mysql.connector
+import os
+import mysql.connector  # Importar para conectar a MySQL
+from dotenv import load_dotenv
 
-# Conexión a la base de datos
+# Especifica la ruta del archivo .env
+dotenv_path = os.path.join(os.path.dirname(__file__), '../.env')
+
+# Cargar el archivo .env desde la ruta específica
+load_dotenv(dotenv_path)
+
+# Obtener las variables de entorno
+host = os.getenv('host')
+user = os.getenv('user')
+password = os.getenv('password')
+database = os.getenv('database')
+
+print(f"Host: {host}")
+print(f"User: {user}")
+print(f"Password: {password}")
+print(f"Database: {database}")
+
+# Conexión a la base de datos MySQL
 conexion = mysql.connector.connect(
-    host="localhost",  # Cambia esto si tu host es diferente
-    user="root",  # Reemplaza con tu nombre de usuario de MySQL
-    password="44273842",  # Reemplaza con tu contraseña de MySQL
-    database="carnes"
+    host=host,
+    user=user,
+    password=password,
+    database=database
 )
 
 cursor = conexion.cursor()
