@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <script>
+        L_NO_TOUCH = false;
+        L_DISABLE_3D = false;
+    </script>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <style>
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" />
+
+    <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+        #map_5fcf34f89741d2cd8c9c98b1f8b718a7 {
+            position: relative;
+            width: 70.0%;
+            height: 70.0%;
+            left: 0.0%;
+            top: 0.0%;
+        }
+
+        .leaflet-container {
+            font-size: 1rem;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css" />
+</head>
+
+<body>
+
+
+    <div class="folium-map" id="map_5fcf34f89741d2cd8c9c98b1f8b718a7"></div>
+
+</body>
+<script>
+
+
+    var map_5fcf34f89741d2cd8c9c98b1f8b718a7 = L.map(
+        "map_5fcf34f89741d2cd8c9c98b1f8b718a7",
+        {
+            center: [-31.4167, -64.1833],
+            crs: L.CRS.EPSG3857,
+            zoom: 12,
+            zoomControl: true,
+            preferCanvas: false,
+        }
+    );
+
+
+
+
+
+    var tile_layer_1c30348e0c921fc242c8ef2a79d1f916 = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        { "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false }
+    );
+
+
+    tile_layer_1c30348e0c921fc242c8ef2a79d1f916.addTo(map_5fcf34f89741d2cd8c9c98b1f8b718a7);
+
+
+    var marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b = L.markerClusterGroup(
+        {}
+    );
+
+
+    var marker_6d86128f9f7929b8dba4fe1c35898368 = L.marker(
+        [-31.4276, -64.123],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_05d6f0dd2f896d6cd10251519d03cbc0 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_6d86128f9f7929b8dba4fe1c35898368.setIcon(icon_05d6f0dd2f896d6cd10251519d03cbc0);
+
+
+    var popup_c312912e9edc7080b318597720e3bc04 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_9088a191cf7f92d761a3a654e77fe79a = $(`<div id="html_9088a191cf7f92d761a3a654e77fe79a" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             ALTAMIRA <br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/1' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_c312912e9edc7080b318597720e3bc04.setContent(html_9088a191cf7f92d761a3a654e77fe79a);
+
+
+
+    marker_6d86128f9f7929b8dba4fe1c35898368.bindPopup(popup_c312912e9edc7080b318597720e3bc04)
+        ;
+
+
+
+
+    var marker_2b15a2fd98477574ef71a69fa150d07d = L.marker(
+        [-31.3362, -64.2613],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_de23da5b637091dc2752a564a384a753 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_2b15a2fd98477574ef71a69fa150d07d.setIcon(icon_de23da5b637091dc2752a564a384a753);
+
+
+    var popup_6d6ba6962b01eb4af97d0a751a3dfdcc = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_c69481aa3dfd5fd9281615423a2fa110 = $(`<div id="html_c69481aa3dfd5fd9281615423a2fa110" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             ARGÜELLO<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/2' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_6d6ba6962b01eb4af97d0a751a3dfdcc.setContent(html_c69481aa3dfd5fd9281615423a2fa110);
+
+
+
+    marker_2b15a2fd98477574ef71a69fa150d07d.bindPopup(popup_6d6ba6962b01eb4af97d0a751a3dfdcc)
+        ;
+
+
+
+
+    var marker_b21459de13641dc0e1be8ea1569a310e = L.marker(
+        [-31.4016, -64.2235],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_51dbe3b1491f87ec67b94eeb5aaa4fda = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_b21459de13641dc0e1be8ea1569a310e.setIcon(icon_51dbe3b1491f87ec67b94eeb5aaa4fda);
+
+
+    var popup_c4c7b4efdfadce147c5dcb35f00115d2 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_eb66cae47884a2fb47b44cfd5ac7d39d = $(`<div id="html_eb66cae47884a2fb47b44cfd5ac7d39d" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             Alto Alberdi<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/3' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_c4c7b4efdfadce147c5dcb35f00115d2.setContent(html_eb66cae47884a2fb47b44cfd5ac7d39d);
+
+
+
+    marker_b21459de13641dc0e1be8ea1569a310e.bindPopup(popup_c4c7b4efdfadce147c5dcb35f00115d2)
+        ;
+
+
+
+
+    var marker_6d459a34e1a121e0224fccc95e8abb81 = L.marker(
+        [-31.3164, -64.309],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_57f660fee33285530294dc846be6f883 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_6d459a34e1a121e0224fccc95e8abb81.setIcon(icon_57f660fee33285530294dc846be6f883);
+
+
+    var popup_33f2a24e5cf541a57a8b92b10bbbacbd = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_95e5862416acb0f1b921953022bd2839 = $(`<div id="html_95e5862416acb0f1b921953022bd2839" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             CENTRO<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/4' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_33f2a24e5cf541a57a8b92b10bbbacbd.setContent(html_95e5862416acb0f1b921953022bd2839);
+
+
+
+    marker_6d459a34e1a121e0224fccc95e8abb81.bindPopup(popup_33f2a24e5cf541a57a8b92b10bbbacbd)
+        ;
+
+
+
+
+    var marker_55d149f4554fc942587c06d83da6d6d7 = L.marker(
+        [-31.4758, -64.1689],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_c46c63a855293989fa20cd59e054a6ed = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_55d149f4554fc942587c06d83da6d6d7.setIcon(icon_c46c63a855293989fa20cd59e054a6ed);
+
+
+    var popup_a0d606871be35b19abd6b6918720f4b9 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_929388dada0f388cbb1d558a97eae6f9 = $(`<div id="html_929388dada0f388cbb1d558a97eae6f9" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             Coronel Olmedo<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/5' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_a0d606871be35b19abd6b6918720f4b9.setContent(html_929388dada0f388cbb1d558a97eae6f9);
+
+
+
+    marker_55d149f4554fc942587c06d83da6d6d7.bindPopup(popup_a0d606871be35b19abd6b6918720f4b9)
+        ;
+
+
+
+
+    var marker_de95893ed20ae4a09bd452ac4a217e65 = L.marker(
+        [-31.4367, -64.1293],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_dbf0a42e07385d67837cb165ff971079 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_de95893ed20ae4a09bd452ac4a217e65.setIcon(icon_dbf0a42e07385d67837cb165ff971079);
+
+
+    var popup_c730c2cee90a48369a9c4af456842d43 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_9487687faf35d6f92511bedacf39f55b = $(`<div id="html_9487687faf35d6f92511bedacf39f55b" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             EMPALME<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/6' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_c730c2cee90a48369a9c4af456842d43.setContent(html_9487687faf35d6f92511bedacf39f55b);
+
+
+
+    marker_de95893ed20ae4a09bd452ac4a217e65.bindPopup(popup_c730c2cee90a48369a9c4af456842d43)
+        ;
+
+
+
+
+    var marker_329f59dd23c700ff161c09fdbdb4ddc9 = L.marker(
+        [-31.4335, -64.1754],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_0929b99c298830ea8bc6aad4947dbca8 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_329f59dd23c700ff161c09fdbdb4ddc9.setIcon(icon_0929b99c298830ea8bc6aad4947dbca8);
+
+
+    var popup_40e9677a63eccd6a9bf2e02c3790d2c2 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_63e82b75051f950f7979bb0232453be4 = $(`<div id="html_63e82b75051f950f7979bb0232453be4" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             Coperativa San Carlos<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/8' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_40e9677a63eccd6a9bf2e02c3790d2c2.setContent(html_63e82b75051f950f7979bb0232453be4);
+
+
+
+    marker_329f59dd23c700ff161c09fdbdb4ddc9.bindPopup(popup_40e9677a63eccd6a9bf2e02c3790d2c2)
+        ;
+
+
+
+
+    var marker_4908ab6c965c86ac94ab3d696061a946 = L.marker(
+        [-31.1527, -64.3192],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_16c604c4683a14311844caddebcebe7b = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_4908ab6c965c86ac94ab3d696061a946.setIcon(icon_16c604c4683a14311844caddebcebe7b);
+
+
+    var popup_d2a19d8f26f8985356bb9387f126f96b = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_bbb310e432b56a9a02a7848f29c176ed = $(`<div id="html_bbb310e432b56a9a02a7848f29c176ed" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             RÍO CEBALLOS<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/11' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_d2a19d8f26f8985356bb9387f126f96b.setContent(html_bbb310e432b56a9a02a7848f29c176ed);
+
+
+
+    marker_4908ab6c965c86ac94ab3d696061a946.bindPopup(popup_d2a19d8f26f8985356bb9387f126f96b)
+        ;
+
+
+
+
+    var marker_7cec277b9f3ebde398be1d374e43ae83 = L.marker(
+        [-31.6514, -63.9109],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_a0d2c0ef7ba8406fa8489fe494cae00e = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_7cec277b9f3ebde398be1d374e43ae83.setIcon(icon_a0d2c0ef7ba8406fa8489fe494cae00e);
+
+
+    var popup_091aa7dcacab0e3a7418217472e774ca = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_2e537c8e5670a6a7335a8234c0fe50c5 = $(`<div id="html_2e537c8e5670a6a7335a8234c0fe50c5" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             RIO SEGUNDO 1<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/13' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_091aa7dcacab0e3a7418217472e774ca.setContent(html_2e537c8e5670a6a7335a8234c0fe50c5);
+
+
+
+    marker_7cec277b9f3ebde398be1d374e43ae83.bindPopup(popup_091aa7dcacab0e3a7418217472e774ca)
+        ;
+
+
+
+
+    var marker_16f92b804a11bb232fe382e37926732d = L.marker(
+        [-31.876, -62.7303],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_869b59e314d5b11389ae9f174bf823a2 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_16f92b804a11bb232fe382e37926732d.setIcon(icon_869b59e314d5b11389ae9f174bf823a2);
+
+
+    var popup_fd0cdd632c4b9608ee5071d25acdcaba = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_f3616296450b55f72134fd8d9ccf1cde = $(`<div id="html_f3616296450b55f72134fd8d9ccf1cde" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             LAS VARILLAS<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/15' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_fd0cdd632c4b9608ee5071d25acdcaba.setContent(html_f3616296450b55f72134fd8d9ccf1cde);
+
+
+
+    marker_16f92b804a11bb232fe382e37926732d.bindPopup(popup_fd0cdd632c4b9608ee5071d25acdcaba)
+        ;
+
+
+
+
+    var marker_dda32ee8dd39d809aaf1792981dfaa1e = L.marker(
+        [-31.0878, -64.4865],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_679003ca8ca00dd226592b841a3573d0 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_dda32ee8dd39d809aaf1792981dfaa1e.setIcon(icon_679003ca8ca00dd226592b841a3573d0);
+
+
+    var popup_8f2742b14b319c8d4ba7d82c6745cfef = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_f80bf257650ed3c17d76f4dcd9bb089b = $(`<div id="html_f80bf257650ed3c17d76f4dcd9bb089b" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             LA FALDA<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/17' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_8f2742b14b319c8d4ba7d82c6745cfef.setContent(html_f80bf257650ed3c17d76f4dcd9bb089b);
+
+
+
+    marker_dda32ee8dd39d809aaf1792981dfaa1e.bindPopup(popup_8f2742b14b319c8d4ba7d82c6745cfef)
+        ;
+
+
+
+
+    var marker_84928c19a657d912b3ce7ac3e88cd890 = L.marker(
+        [-31.7238, -65.004],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_451b2c14b68e229b725051797d547574 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_84928c19a657d912b3ce7ac3e88cd890.setIcon(icon_451b2c14b68e229b725051797d547574);
+
+
+    var popup_ff0ed634a151a66273632a32a940bf51 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_50fa4a2acfc9882d0023f0760342b968 = $(`<div id="html_50fa4a2acfc9882d0023f0760342b968" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             MINA CLAVERO<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/24' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_ff0ed634a151a66273632a32a940bf51.setContent(html_50fa4a2acfc9882d0023f0760342b968);
+
+
+
+    marker_84928c19a657d912b3ce7ac3e88cd890.bindPopup(popup_ff0ed634a151a66273632a32a940bf51)
+        ;
+
+
+
+
+    var marker_53177f0c6e77c73daa5dbf9fde8f00e9 = L.marker(
+        [-30.427, -64.3533],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_0fa4fc15e25547f21f1e5e3b880f3c88 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_53177f0c6e77c73daa5dbf9fde8f00e9.setIcon(icon_0fa4fc15e25547f21f1e5e3b880f3c88);
+
+
+    var popup_d0e67acec7ce6b3bfc4cc006c1882565 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_46d7c1c260a94fc6e975dc6d6d2465ad = $(`<div id="html_46d7c1c260a94fc6e975dc6d6d2465ad" style="width: 100.0%; height: 100.0%;">             <b>Cordiez</b><br>             DEAN FUNES<br>             Promedio Vaca: $8662.41<br>             Promedio Cerdo: $8230.36<br>             Promedio Pollo: $4980.69<br>             <a href='/productos/25' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_d0e67acec7ce6b3bfc4cc006c1882565.setContent(html_46d7c1c260a94fc6e975dc6d6d2465ad);
+
+
+
+    marker_53177f0c6e77c73daa5dbf9fde8f00e9.bindPopup(popup_d0e67acec7ce6b3bfc4cc006c1882565)
+        ;
+
+
+
+
+    var marker_eaac0098364fbd87996c7edb93f0afcc = L.marker(
+        [-31.3468, -64.2727],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_2e7e2b83a6af36d23835bf5b8dda902d = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_eaac0098364fbd87996c7edb93f0afcc.setIcon(icon_2e7e2b83a6af36d23835bf5b8dda902d);
+
+
+    var popup_eb8c2743760d60266645d13d26b085e2 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_84858fa1a11081138a53297dbf79cf5e = $(`<div id="html_84858fa1a11081138a53297dbf79cf5e" style="width: 100.0%; height: 100.0%;">             <b>MH minimercado</b><br>             La Salle<br>             Promedio Vaca: $9123.08<br>             Promedio Cerdo: $9618.18<br>             Promedio Pollo: $5620.00<br>             <a href='/productos/28' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_eb8c2743760d60266645d13d26b085e2.setContent(html_84858fa1a11081138a53297dbf79cf5e);
+
+
+
+    marker_eaac0098364fbd87996c7edb93f0afcc.bindPopup(popup_eb8c2743760d60266645d13d26b085e2)
+        ;
+
+
+
+
+    var marker_11941ee63c8145d3832970bd1cb1c357 = L.marker(
+        [-31.3677, -64.2335],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_dad2968ac46b433db23ba3f5866b17e5 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_11941ee63c8145d3832970bd1cb1c357.setIcon(icon_dad2968ac46b433db23ba3f5866b17e5);
+
+
+    var popup_be7435ddb4e126c3ee70aa4df67b8ae3 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_79a7dab888f7d72480355c2821c07cf2 = $(`<div id="html_79a7dab888f7d72480355c2821c07cf2" style="width: 100.0%; height: 100.0%;">             <b>Caravana</b><br>             Cerro de las rosas<br>             Promedio Vaca: $8898.50<br>             Promedio Cerdo: $6815.48<br>             Promedio Pollo: No Disponible<br>             <a href='/productos/29' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_be7435ddb4e126c3ee70aa4df67b8ae3.setContent(html_79a7dab888f7d72480355c2821c07cf2);
+
+
+
+    marker_11941ee63c8145d3832970bd1cb1c357.bindPopup(popup_be7435ddb4e126c3ee70aa4df67b8ae3)
+        ;
+
+
+
+
+    var marker_e18e40dca10a4e6547ff8455127ae042 = L.marker(
+        [-31.3558, -64.2506],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_ad9d9a860cb8f559ae9c68ce5d9e6bb0 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_e18e40dca10a4e6547ff8455127ae042.setIcon(icon_ad9d9a860cb8f559ae9c68ce5d9e6bb0);
+
+
+    var popup_dc687f7a47f5151893f8d52533b7c596 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_a778ad3024bcdf01cb605aa06fb45248 = $(`<div id="html_a778ad3024bcdf01cb605aa06fb45248" style="width: 100.0%; height: 100.0%;">             <b>Farmers Market</b><br>             Villa Belgrano<br>             Promedio Vaca: $8804.55<br>             Promedio Cerdo: $9607.50<br>             Promedio Pollo: $6458.33<br>             <a href='/productos/30' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_dc687f7a47f5151893f8d52533b7c596.setContent(html_a778ad3024bcdf01cb605aa06fb45248);
+
+
+
+    marker_e18e40dca10a4e6547ff8455127ae042.bindPopup(popup_dc687f7a47f5151893f8d52533b7c596)
+        ;
+
+
+
+
+    var marker_0c61dc66b80681e5aed287e2680ed4ce = L.marker(
+        [-31.3496, -64.2506],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_db68f6b7526dba652f4f297e462f7ed2 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_0c61dc66b80681e5aed287e2680ed4ce.setIcon(icon_db68f6b7526dba652f4f297e462f7ed2);
+
+
+    var popup_0496e5fd2f4e83423bf6509c455fea86 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_f8e1020aee0e1b17e1f6e0da6e75b75c = $(`<div id="html_f8e1020aee0e1b17e1f6e0da6e75b75c" style="width: 100.0%; height: 100.0%;">             <b>La Josefina</b><br>             Villa Belgrano<br>             Promedio Vaca: $7531.96<br>             Promedio Cerdo: $6475.00<br>             Promedio Pollo: $4550.00<br>             <a href='/productos/31' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_0496e5fd2f4e83423bf6509c455fea86.setContent(html_f8e1020aee0e1b17e1f6e0da6e75b75c);
+
+
+
+    marker_0c61dc66b80681e5aed287e2680ed4ce.bindPopup(popup_0496e5fd2f4e83423bf6509c455fea86)
+        ;
+
+
+
+
+    var marker_4b75241e5c49bc9c0f1eb2525c57eb33 = L.marker(
+        [-31.3628, -64.2363],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_5b225315c7fdb32348c12e02c2ca6821 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_4b75241e5c49bc9c0f1eb2525c57eb33.setIcon(icon_5b225315c7fdb32348c12e02c2ca6821);
+
+
+    var popup_700704afaca6830f3bf416eab3d23a7f = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_bc14f12f28434bf461b31caa726a0e54 = $(`<div id="html_bc14f12f28434bf461b31caa726a0e54" style="width: 100.0%; height: 100.0%;">             <b>Disco</b><br>             Cerro de las Rosas<br>             Promedio Vaca: $9292.90<br>             Promedio Cerdo: $7350.70<br>             Promedio Pollo: $4727.40<br>             <a href='/productos/32' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_700704afaca6830f3bf416eab3d23a7f.setContent(html_bc14f12f28434bf461b31caa726a0e54);
+
+
+
+    marker_4b75241e5c49bc9c0f1eb2525c57eb33.bindPopup(popup_700704afaca6830f3bf416eab3d23a7f)
+        ;
+
+
+
+
+    var marker_89cd0a048ab8d1d393b2bae2e76d5cba = L.marker(
+        [-31.3773, -64.2264],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_bacd4159ab41e39da7344fdf80bcafc7 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_89cd0a048ab8d1d393b2bae2e76d5cba.setIcon(icon_bacd4159ab41e39da7344fdf80bcafc7);
+
+
+    var popup_14bc4e6c4135ad376e97e464a3f2df6b = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_2203afcacddf9ee0a8ded261f5e6799d = $(`<div id="html_2203afcacddf9ee0a8ded261f5e6799d" style="width: 100.0%; height: 100.0%;">             <b>Disco</b><br>             Cerro de las rosas<br>             Promedio Vaca: $9292.90<br>             Promedio Cerdo: $7350.70<br>             Promedio Pollo: $4727.40<br>             <a href='/productos/35' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_14bc4e6c4135ad376e97e464a3f2df6b.setContent(html_2203afcacddf9ee0a8ded261f5e6799d);
+
+
+
+    marker_89cd0a048ab8d1d393b2bae2e76d5cba.bindPopup(popup_14bc4e6c4135ad376e97e464a3f2df6b)
+        ;
+
+
+
+
+    var marker_24050af3a20b8990c41af06b953ce316 = L.marker(
+        [-31.3805, -64.2151],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_3d00196747a4461ada6d8e2abebfb041 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_24050af3a20b8990c41af06b953ce316.setIcon(icon_3d00196747a4461ada6d8e2abebfb041);
+
+
+    var popup_cc78452319b66ccf52307e16da827819 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_4369a01eea84efb4ca8c72d773047ef8 = $(`<div id="html_4369a01eea84efb4ca8c72d773047ef8" style="width: 100.0%; height: 100.0%;">             <b>Disco</b><br>             Altos villa cabrera<br>             Promedio Vaca: $9292.90<br>             Promedio Cerdo: $7350.70<br>             Promedio Pollo: $4727.40<br>             <a href='/productos/36' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_cc78452319b66ccf52307e16da827819.setContent(html_4369a01eea84efb4ca8c72d773047ef8);
+
+
+
+    marker_24050af3a20b8990c41af06b953ce316.bindPopup(popup_cc78452319b66ccf52307e16da827819)
+        ;
+
+
+
+
+    var marker_8909c327663bfca5376280b990812a95 = L.marker(
+        [-31.4361, -64.1951],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_ad9a1e28c272a4731c91a352afb19796 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_8909c327663bfca5376280b990812a95.setIcon(icon_ad9a1e28c272a4731c91a352afb19796);
+
+
+    var popup_7a19fcf8ab8d04f9ed9e4d4c147608ac = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_231ea683ab208e5787490a1624c29642 = $(`<div id="html_231ea683ab208e5787490a1624c29642" style="width: 100.0%; height: 100.0%;">             <b>Disco</b><br>             Colina de Velez Sarfield<br>             Promedio Vaca: $9292.90<br>             Promedio Cerdo: $7350.70<br>             Promedio Pollo: $4727.40<br>             <a href='/productos/37' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_7a19fcf8ab8d04f9ed9e4d4c147608ac.setContent(html_231ea683ab208e5787490a1624c29642);
+
+
+
+    marker_8909c327663bfca5376280b990812a95.bindPopup(popup_7a19fcf8ab8d04f9ed9e4d4c147608ac)
+        ;
+
+
+
+
+    var marker_c7736856aff98a5aa6a6be17523bd3d4 = L.marker(
+        [-31.4109, -64.1926],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_6407285f30352b6f20286c2e29d7cf0a = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_c7736856aff98a5aa6a6be17523bd3d4.setIcon(icon_6407285f30352b6f20286c2e29d7cf0a);
+
+
+    var popup_8ac8cef471726a0ce3e51bdaf8457d49 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_20ab50e63c0a6de93d2ae7120cb253f0 = $(`<div id="html_20ab50e63c0a6de93d2ae7120cb253f0" style="width: 100.0%; height: 100.0%;">             <b>Disco</b><br>             Alberdi<br>             Promedio Vaca: $9292.90<br>             Promedio Cerdo: $7350.70<br>             Promedio Pollo: $4727.40<br>             <a href='/productos/38' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_8ac8cef471726a0ce3e51bdaf8457d49.setContent(html_20ab50e63c0a6de93d2ae7120cb253f0);
+
+
+
+    marker_c7736856aff98a5aa6a6be17523bd3d4.bindPopup(popup_8ac8cef471726a0ce3e51bdaf8457d49)
+        ;
+
+
+
+
+    var marker_c2b740645141fc2baf15b2a8d9fcaa1d = L.marker(
+        [-31.3048, -64.2906],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_2a296abc1f63c55a9c722dc31372c972 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_c2b740645141fc2baf15b2a8d9fcaa1d.setIcon(icon_2a296abc1f63c55a9c722dc31372c972);
+
+
+    var popup_0225321d0de966ff09c343e4f891ee59 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_66d1b7397c347160038a807a8c0d76a4 = $(`<div id="html_66d1b7397c347160038a807a8c0d76a4" style="width: 100.0%; height: 100.0%;">             <b>Disco</b><br>             Nueva Cordoba<br>             Promedio Vaca: $9292.90<br>             Promedio Cerdo: $7350.70<br>             Promedio Pollo: $4727.40<br>             <a href='/productos/39' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_0225321d0de966ff09c343e4f891ee59.setContent(html_66d1b7397c347160038a807a8c0d76a4);
+
+
+
+    marker_c2b740645141fc2baf15b2a8d9fcaa1d.bindPopup(popup_0225321d0de966ff09c343e4f891ee59)
+        ;
+
+
+
+
+    var marker_0f8e69de14ec837a641092a5226dc812 = L.marker(
+        [-31.4253, -64.1848],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_08cfa3453656a6c1f2e6cac2e4f84a32 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_0f8e69de14ec837a641092a5226dc812.setIcon(icon_08cfa3453656a6c1f2e6cac2e4f84a32);
+
+
+    var popup_3c0a78a561360ea4eb714e26f6451e4a = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_aefefe572c61809bb85c49f654b7d9ed = $(`<div id="html_aefefe572c61809bb85c49f654b7d9ed" style="width: 100.0%; height: 100.0%;">             <b>Disco</b><br>             Nueva Cordoba<br>             Promedio Vaca: $9292.90<br>             Promedio Cerdo: $7350.70<br>             Promedio Pollo: $4727.40<br>             <a href='/productos/40' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_3c0a78a561360ea4eb714e26f6451e4a.setContent(html_aefefe572c61809bb85c49f654b7d9ed);
+
+
+
+    marker_0f8e69de14ec837a641092a5226dc812.bindPopup(popup_3c0a78a561360ea4eb714e26f6451e4a)
+        ;
+
+
+
+
+    var marker_484058b79c6a5431da299d05ecbe3d5e = L.marker(
+        [-31.3978, -64.1836],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_2b348170b92639ba038629201b8b0ac2 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_484058b79c6a5431da299d05ecbe3d5e.setIcon(icon_2b348170b92639ba038629201b8b0ac2);
+
+
+    var popup_8d0998f9c82cd5f88134ba223377f714 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_9d78a5c7c8296d022942222a2f5de506 = $(`<div id="html_9d78a5c7c8296d022942222a2f5de506" style="width: 100.0%; height: 100.0%;">             <b>Disco</b><br>             Alta cordoba<br>             Promedio Vaca: $9292.90<br>             Promedio Cerdo: $7350.70<br>             Promedio Pollo: $4727.40<br>             <a href='/productos/41' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_8d0998f9c82cd5f88134ba223377f714.setContent(html_9d78a5c7c8296d022942222a2f5de506);
+
+
+
+    marker_484058b79c6a5431da299d05ecbe3d5e.bindPopup(popup_8d0998f9c82cd5f88134ba223377f714)
+        ;
+
+
+
+
+    var marker_51fc243465358c23440b30cbf95a62cd = L.marker(
+        [-31.3539, -64.2498],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_e1ffc6a3ba3480d2d06be3a9f1c0f22b = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_51fc243465358c23440b30cbf95a62cd.setIcon(icon_e1ffc6a3ba3480d2d06be3a9f1c0f22b);
+
+
+    var popup_8e3bf752e212d44023e4f7a2211e331d = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_64a9ae3e077e47aaf2ba939cc31056a0 = $(`<div id="html_64a9ae3e077e47aaf2ba939cc31056a0" style="width: 100.0%; height: 100.0%;">             <b>Blackbull</b><br>             Villa Belgrano<br>             Promedio Vaca: $11335.56<br>             Promedio Cerdo: $14973.91<br>             Promedio Pollo: No Disponible<br>             <a href='/productos/42' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_8e3bf752e212d44023e4f7a2211e331d.setContent(html_64a9ae3e077e47aaf2ba939cc31056a0);
+
+
+
+    marker_51fc243465358c23440b30cbf95a62cd.bindPopup(popup_8e3bf752e212d44023e4f7a2211e331d)
+        ;
+
+
+
+
+    var marker_edb8767410fe552450736dfba9d7f737 = L.marker(
+        [-31.3901, -64.2048],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_415f470f8a12d2b31d1d02d447723f89 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_edb8767410fe552450736dfba9d7f737.setIcon(icon_415f470f8a12d2b31d1d02d447723f89);
+
+
+    var popup_1361e986c7b4d952c1c3561805c7d292 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_aced4f0ff9567d0f947c2036df81cc23 = $(`<div id="html_aced4f0ff9567d0f947c2036df81cc23" style="width: 100.0%; height: 100.0%;">             <b>Carnes Cordoba</b><br>             Bajo Galan<br>             Promedio Vaca: $7427.10<br>             Promedio Cerdo: $5741.25<br>             Promedio Pollo: $3225.00<br>             <a href='/productos/43' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_1361e986c7b4d952c1c3561805c7d292.setContent(html_aced4f0ff9567d0f947c2036df81cc23);
+
+
+
+    marker_edb8767410fe552450736dfba9d7f737.bindPopup(popup_1361e986c7b4d952c1c3561805c7d292)
+        ;
+
+
+
+
+    var marker_be4263290d5aca6bf5fe54cb9b1579ea = L.marker(
+        [-31.4184, -64.1891],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_3d9db626f305f90602fb63ead1b6682a = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_be4263290d5aca6bf5fe54cb9b1579ea.setIcon(icon_3d9db626f305f90602fb63ead1b6682a);
+
+
+    var popup_769d0db6a878f079bbadbd154c512b7d = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_ef1979e0cfbb5064b2f8f416003c12ec = $(`<div id="html_ef1979e0cfbb5064b2f8f416003c12ec" style="width: 100.0%; height: 100.0%;">             <b>Carnes Cordoba</b><br>             LaMadrid<br>             Promedio Vaca: $7427.10<br>             Promedio Cerdo: $5741.25<br>             Promedio Pollo: $3225.00<br>             <a href='/productos/45' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_769d0db6a878f079bbadbd154c512b7d.setContent(html_ef1979e0cfbb5064b2f8f416003c12ec);
+
+
+
+    marker_be4263290d5aca6bf5fe54cb9b1579ea.bindPopup(popup_769d0db6a878f079bbadbd154c512b7d)
+        ;
+
+
+
+
+    var marker_8e24d58183542fac3aa21c979e6cd559 = L.marker(
+        [-31.3888, -64.1357],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_a812a3efc6c45e159d21d0d78f5ee089 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_8e24d58183542fac3aa21c979e6cd559.setIcon(icon_a812a3efc6c45e159d21d0d78f5ee089);
+
+
+    var popup_1d9c2c26cdee2cb9063e700e16b2571c = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_bb90db21e90ad8546884b748eacb9ed2 = $(`<div id="html_bb90db21e90ad8546884b748eacb9ed2" style="width: 100.0%; height: 100.0%;">             <b>Carnes Cordoba</b><br>             Yofre<br>             Promedio Vaca: $7427.10<br>             Promedio Cerdo: $5741.25<br>             Promedio Pollo: $3225.00<br>             <a href='/productos/46' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_1d9c2c26cdee2cb9063e700e16b2571c.setContent(html_bb90db21e90ad8546884b748eacb9ed2);
+
+
+
+    marker_8e24d58183542fac3aa21c979e6cd559.bindPopup(popup_1d9c2c26cdee2cb9063e700e16b2571c)
+        ;
+
+
+
+
+    var marker_f3206917ff0f5861378c1c519d0d98f3 = L.marker(
+        [-31.3044, -64.2847],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_d7216f89976bedbdf7fda9e7e7fcbfc9 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_f3206917ff0f5861378c1c519d0d98f3.setIcon(icon_d7216f89976bedbdf7fda9e7e7fcbfc9);
+
+
+    var popup_5415ddd20e04caa6c930d9a4ba1c20d5 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_1e5718573c0396aec65283893cca679d = $(`<div id="html_1e5718573c0396aec65283893cca679d" style="width: 100.0%; height: 100.0%;">             <b>Los Amigos</b><br>             Villa Allende<br>             Promedio Vaca: $6965.69<br>             Promedio Cerdo: $6302.17<br>             Promedio Pollo: $4400.00<br>             <a href='/productos/47' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_5415ddd20e04caa6c930d9a4ba1c20d5.setContent(html_1e5718573c0396aec65283893cca679d);
+
+
+
+    marker_f3206917ff0f5861378c1c519d0d98f3.bindPopup(popup_5415ddd20e04caa6c930d9a4ba1c20d5)
+        ;
+
+
+
+
+    var marker_c45935744103646bc378066920f25283 = L.marker(
+        [-31.4311, -64.1899],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_7d1b40b624952b72f984badec3ddd0db = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_c45935744103646bc378066920f25283.setIcon(icon_7d1b40b624952b72f984badec3ddd0db);
+
+
+    var popup_51046cb8c013e66a7db5b7914fda5382 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_e5d309c465ea728dc36354c0eedaf3b9 = $(`<div id="html_e5d309c465ea728dc36354c0eedaf3b9" style="width: 100.0%; height: 100.0%;">             <b>Doble Pechuga</b><br>             Nueva Córdoba<br>             Promedio Vaca: $6600.00<br>             Promedio Cerdo: No Disponible<br>             Promedio Pollo: $4500.00<br>             <a href='/productos/48' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_51046cb8c013e66a7db5b7914fda5382.setContent(html_e5d309c465ea728dc36354c0eedaf3b9);
+
+
+
+    marker_c45935744103646bc378066920f25283.bindPopup(popup_51046cb8c013e66a7db5b7914fda5382)
+        ;
+
+
+
+
+    var marker_aa49959981d1393bd0e5c2bf9a166d9f = L.marker(
+        [-31.3672, -64.2209],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_70d34819d011ad02baf0480c9582e073 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_aa49959981d1393bd0e5c2bf9a166d9f.setIcon(icon_70d34819d011ad02baf0480c9582e073);
+
+
+    var popup_171c37898dee07f9404addec0e55f599 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_a5d5808773acbcf9d8f61a36163bff07 = $(`<div id="html_a5d5808773acbcf9d8f61a36163bff07" style="width: 100.0%; height: 100.0%;">             <b>El Tori</b><br>             Cerro Chico<br>             Promedio Vaca: $7486.59<br>             Promedio Cerdo: No Disponible<br>             Promedio Pollo: No Disponible<br>             <a href='/productos/49' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_171c37898dee07f9404addec0e55f599.setContent(html_a5d5808773acbcf9d8f61a36163bff07);
+
+
+
+    marker_aa49959981d1393bd0e5c2bf9a166d9f.bindPopup(popup_171c37898dee07f9404addec0e55f599)
+        ;
+
+
+
+
+    var marker_f523491a8dbf471ff31fb08957f14532 = L.marker(
+        [-31.4145, -64.2325],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_75e3c15f8e4db98fe52941906f344979 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_f523491a8dbf471ff31fb08957f14532.setIcon(icon_75e3c15f8e4db98fe52941906f344979);
+
+
+    var popup_822ca6d3f2a7ee9b8643621f1ccc7ad0 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_85a869a431379c39dad4250e62b73872 = $(`<div id="html_85a869a431379c39dad4250e62b73872" style="width: 100.0%; height: 100.0%;">             <b>Don Julio</b><br>             LaMadrid<br>             Promedio Vaca: $18390.00<br>             Promedio Cerdo: $3649.17<br>             Promedio Pollo: No Disponible<br>             <a href='/productos/50' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_822ca6d3f2a7ee9b8643621f1ccc7ad0.setContent(html_85a869a431379c39dad4250e62b73872);
+
+
+
+    marker_f523491a8dbf471ff31fb08957f14532.bindPopup(popup_822ca6d3f2a7ee9b8643621f1ccc7ad0)
+        ;
+
+
+
+
+    var marker_7358e1fe884d5c5af26ad088ed48e8be = L.marker(
+        [-31.3899, -64.2145],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_7419591b6c0c1d1438fce6c6e44adb74 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_7358e1fe884d5c5af26ad088ed48e8be.setIcon(icon_7419591b6c0c1d1438fce6c6e44adb74);
+
+
+    var popup_7ae4f540ef48ad8c80d852f091565aa1 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_c963e650d518b9446726d187f0382a8d = $(`<div id="html_c963e650d518b9446726d187f0382a8d" style="width: 100.0%; height: 100.0%;">             <b>San Cayetano</b><br>             Villa Cabrera<br>             Promedio Vaca: $8645.97<br>             Promedio Cerdo: $8136.36<br>             Promedio Pollo: $4962.50<br>             <a href='/productos/51' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_7ae4f540ef48ad8c80d852f091565aa1.setContent(html_c963e650d518b9446726d187f0382a8d);
+
+
+
+    marker_7358e1fe884d5c5af26ad088ed48e8be.bindPopup(popup_7ae4f540ef48ad8c80d852f091565aa1)
+        ;
+
+
+
+
+    var marker_0999091b6295bb0cec099d648aba7023 = L.marker(
+        [-31.3465, -64.2773],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_e84a7cbad83995e7bb50914f349d466d = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_0999091b6295bb0cec099d648aba7023.setIcon(icon_e84a7cbad83995e7bb50914f349d466d);
+
+
+    var popup_9a21d0ef7655fc594571ecefaf54789b = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_c7d51bbb09991ad3ea70bc2ebbb21238 = $(`<div id="html_c7d51bbb09991ad3ea70bc2ebbb21238" style="width: 100.0%; height: 100.0%;">             <b>Mercado De Carnes</b><br>             Argüello<br>             Promedio Vaca: $7914.00<br>             Promedio Cerdo: $6408.33<br>             Promedio Pollo: $4170.00<br>             <a href='/productos/52' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_9a21d0ef7655fc594571ecefaf54789b.setContent(html_c7d51bbb09991ad3ea70bc2ebbb21238);
+
+
+
+    marker_0999091b6295bb0cec099d648aba7023.bindPopup(popup_9a21d0ef7655fc594571ecefaf54789b)
+        ;
+
+
+
+
+    var marker_2dfbd61c8c69a8c2598579caee683aef = L.marker(
+        [-31.3461, -64.2699],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_20a9f0c6bd35d850278f8b897b380462 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_2dfbd61c8c69a8c2598579caee683aef.setIcon(icon_20a9f0c6bd35d850278f8b897b380462);
+
+
+    var popup_79c9b833f99bf3440c4f380656308770 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_4e66b857120fb9f556321996cf1c14d6 = $(`<div id="html_4e66b857120fb9f556321996cf1c14d6" style="width: 100.0%; height: 100.0%;">             <b>Carrefour</b><br>             Argüello<br>             Promedio Vaca: $8214.95<br>             Promedio Cerdo: $6249.12<br>             Promedio Pollo: $5954.60<br>             <a href='/productos/53' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_79c9b833f99bf3440c4f380656308770.setContent(html_4e66b857120fb9f556321996cf1c14d6);
+
+
+
+    marker_2dfbd61c8c69a8c2598579caee683aef.bindPopup(popup_79c9b833f99bf3440c4f380656308770)
+        ;
+
+
+
+
+    var marker_e0865e649894c3a492160dee9eaacdd9 = L.marker(
+        [-31.3639, -64.2077],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_eb8130b8db93e5d76b0840b1029aae64 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_e0865e649894c3a492160dee9eaacdd9.setIcon(icon_eb8130b8db93e5d76b0840b1029aae64);
+
+
+    var popup_907eae9fa18ecfe93d39d14183f14c88 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_586b925c9944358eeb2064825a57d76e = $(`<div id="html_586b925c9944358eeb2064825a57d76e" style="width: 100.0%; height: 100.0%;">             <b>Abastecimiento San Benito</b><br>             Poeta Lugones<br>             Promedio Vaca: $8133.29<br>             Promedio Cerdo: $7800.00<br>             Promedio Pollo: $5285.71<br>             <a href='/productos/54' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_907eae9fa18ecfe93d39d14183f14c88.setContent(html_586b925c9944358eeb2064825a57d76e);
+
+
+
+    marker_e0865e649894c3a492160dee9eaacdd9.bindPopup(popup_907eae9fa18ecfe93d39d14183f14c88)
+        ;
+
+
+
+
+    var marker_2f7ca2d887f971c94846d4d0036ec71a = L.marker(
+        [-31.366, -64.2192],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_90e9a3fda16e3999f07807a048ec1abe = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_2f7ca2d887f971c94846d4d0036ec71a.setIcon(icon_90e9a3fda16e3999f07807a048ec1abe);
+
+
+    var popup_1335270045bd4a27fb423b2444833673 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_3f7833e19c2726b246fc7fb5a2be2bf5 = $(`<div id="html_3f7833e19c2726b246fc7fb5a2be2bf5" style="width: 100.0%; height: 100.0%;">             <b>Supermami</b><br>             Alto Verde<br>             Promedio Vaca: $9673.04<br>             Promedio Cerdo: $6627.14<br>             Promedio Pollo: $3222.50<br>             <a href='/productos/55' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_1335270045bd4a27fb423b2444833673.setContent(html_3f7833e19c2726b246fc7fb5a2be2bf5);
+
+
+
+    marker_2f7ca2d887f971c94846d4d0036ec71a.bindPopup(popup_1335270045bd4a27fb423b2444833673)
+        ;
+
+
+
+
+    var marker_091a69f49deeb3f7ef2ebae6bdf985ac = L.marker(
+        [-31.4301, -64.2134],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_b13c9e258f6ea44211e758ec1830fdae = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_091a69f49deeb3f7ef2ebae6bdf985ac.setIcon(icon_b13c9e258f6ea44211e758ec1830fdae);
+
+
+    var popup_7b9843f7c7a1826928a440bb31aa62b7 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_2781b3a3339d5dc65a70b34736b3205b = $(`<div id="html_2781b3a3339d5dc65a70b34736b3205b" style="width: 100.0%; height: 100.0%;">             <b>Supermami</b><br>             Los Naranjos<br>             Promedio Vaca: $9673.04<br>             Promedio Cerdo: $6627.14<br>             Promedio Pollo: $3222.50<br>             <a href='/productos/56' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_7b9843f7c7a1826928a440bb31aa62b7.setContent(html_2781b3a3339d5dc65a70b34736b3205b);
+
+
+
+    marker_091a69f49deeb3f7ef2ebae6bdf985ac.bindPopup(popup_7b9843f7c7a1826928a440bb31aa62b7)
+        ;
+
+
+
+
+    var marker_5de071abd194f0ad7a9df3d438c5554a = L.marker(
+        [-31.4241, -64.1644],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_34d4d032e164b0136e63feddf7e47771 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_5de071abd194f0ad7a9df3d438c5554a.setIcon(icon_34d4d032e164b0136e63feddf7e47771);
+
+
+    var popup_afa7d6b256cbeebec7a236726eaae0bc = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_4fff87ff477ff18e97b538b4581b2e96 = $(`<div id="html_4fff87ff477ff18e97b538b4581b2e96" style="width: 100.0%; height: 100.0%;">             <b>Supermami</b><br>             San Vicente<br>             Promedio Vaca: $9673.04<br>             Promedio Cerdo: $6627.14<br>             Promedio Pollo: $3222.50<br>             <a href='/productos/57' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_afa7d6b256cbeebec7a236726eaae0bc.setContent(html_4fff87ff477ff18e97b538b4581b2e96);
+
+
+
+    marker_5de071abd194f0ad7a9df3d438c5554a.bindPopup(popup_afa7d6b256cbeebec7a236726eaae0bc)
+        ;
+
+
+
+
+    var marker_bced3f6fb3972632b60a79c010fd5f6f = L.marker(
+        [-31.4637, -64.2175],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_2c06a6ac162536ba8b36b8fb38e828b4 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_bced3f6fb3972632b60a79c010fd5f6f.setIcon(icon_2c06a6ac162536ba8b36b8fb38e828b4);
+
+
+    var popup_70070d144ef0756396eed8f7c9fe6bd8 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_f8caa4aa2c45edd82d4bf77691735590 = $(`<div id="html_f8caa4aa2c45edd82d4bf77691735590" style="width: 100.0%; height: 100.0%;">             <b>Supermami</b><br>             Los Olmos<br>             Promedio Vaca: $9673.04<br>             Promedio Cerdo: $6627.14<br>             Promedio Pollo: $3222.50<br>             <a href='/productos/58' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_70070d144ef0756396eed8f7c9fe6bd8.setContent(html_f8caa4aa2c45edd82d4bf77691735590);
+
+
+
+    marker_bced3f6fb3972632b60a79c010fd5f6f.bindPopup(popup_70070d144ef0756396eed8f7c9fe6bd8)
+        ;
+
+
+
+
+    var marker_2405cfd0d4dd71e4bd5fecae4d500056 = L.marker(
+        [-31.3569, -64.1821],
+        {}
+    ).addTo(marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b);
+
+
+    var icon_62a675c5478749f818c63ed3377e7399 = L.AwesomeMarkers.icon(
+        { "extraClasses": "fa-rotate-0", "icon": "cutlery", "iconColor": "white", "markerColor": "red", "prefix": "fa" }
+    );
+    marker_2405cfd0d4dd71e4bd5fecae4d500056.setIcon(icon_62a675c5478749f818c63ed3377e7399);
+
+
+    var popup_169fc92da922259bede11c4cae49b2b6 = L.popup({ "maxWidth": "100%" });
+
+
+
+    var html_ad726e0e5922a6f7a06848018ddf08a3 = $(`<div id="html_ad726e0e5922a6f7a06848018ddf08a3" style="width: 100.0%; height: 100.0%;">             <b>Supermami</b><br>             Claros del Bosque<br>             Promedio Vaca: $9673.04<br>             Promedio Cerdo: $6627.14<br>             Promedio Pollo: $3222.50<br>             <a href='/productos/59' target='_blank'>Ver Productos</a>             </div>`)[0];
+    popup_169fc92da922259bede11c4cae49b2b6.setContent(html_ad726e0e5922a6f7a06848018ddf08a3);
+
+
+
+    marker_2405cfd0d4dd71e4bd5fecae4d500056.bindPopup(popup_169fc92da922259bede11c4cae49b2b6)
+        ;
+
+
+
+
+    marker_cluster_4299c49b728eb1b0cc2fea4eb34f711b.addTo(map_5fcf34f89741d2cd8c9c98b1f8b718a7);
+
+</script>
+
+</html>

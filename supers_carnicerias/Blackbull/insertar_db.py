@@ -1,17 +1,34 @@
+import os
 import pandas as pd
-import mysql.connector
+import mysql.connector  # Importar para conectar a MySQL
+from datetime import datetime  # Importar para manejar fechas
+from dotenv import load_dotenv
 
-# Leer el archivo CSV
-df = pd.read_csv('blackbull_with_category_complete.csv')
+# Especifica la ruta del archivo .env
+dotenv_path = os.path.join(os.path.dirname(__file__), '../.env')
 
-# Conectar a la base de datos MySQL
+# Cargar el archivo .env desde la ruta específica
+load_dotenv(dotenv_path)
+
+# Obtener las variables de entorno
+host = os.getenv('host')
+user = os.getenv('user')
+password = os.getenv('password')
+database = os.getenv('database')
+
+print(f"Host: {host}")
+print(f"User: {user}")
+print(f"Password: {password}")
+print(f"Database: {database}")
+
+# Conexión a la base de datos MySQL
 conn = mysql.connector.connect(
-    host='localhost',  # Cambia esto si tu base de datos no está en localhost
-    user='root',  # Tu usuario de MySQL
-    password='44273842',  # Tu contraseña de MySQL
-    database='carnes'  # Nombre de la base de datos
+    host=host,
+    user=user,
+    password=password,
+    database=database
 )
-
+df = pd.read_csv('blackbull_with_category_complete.csv')
 cursor = conn.cursor()
 
 # Insertar el supermercado en la tabla 'supermercados'
