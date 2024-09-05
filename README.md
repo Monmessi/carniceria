@@ -7,11 +7,9 @@ estoy haciendo una base de datos SQL llamada carnes, la cual va a tener todos lo
   tree --prune -I 'venv|__pycache__|*.pyc|*.pyo|*.log|*.db|*.sqlite|*.egg-info|__init__.py|node_modules|build|*.js.map|*.css.map' > project_structure.txt
 
   .
-├── Carrefour.csv
+
 ├── README.md
 ├── carnes.sql
-├── cas.csv
-├── import csv.py
 ├── project_structure.txt
 ├── requirements.txt
 └── supers_carnicerias
